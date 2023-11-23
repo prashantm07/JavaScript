@@ -1,0 +1,9 @@
+in java script there is 3 types of variables
+1 var : var can be hoisted
+2 let : can not be redeclared must be declare before use, having block scope only
+3 const : if value shoud not be changed then use cost veriables
+         when we declare 
+         new array
+         new object
+         new function
+         new regExp

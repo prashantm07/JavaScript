@@ -18,6 +18,6 @@ console.log(a);
 {
     const k = 10;
     k = 20; // invalid it showing error 
-    const w; // invalid showing error , const must be initialized
+    // const w; // invalid showing error , const must be initialized
 }
 // can't use here also
