@@ -1,5 +1,5 @@
 let str = "apple, banana , kiwi";
-let s = str.slice(0, 6);
+let s = str.slice(0, 6); // extracting the part of the string
 console.log(s);
 
 let str1 = "   welcome to hyderabad to hyderabad      ";

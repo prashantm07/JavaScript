@@ -31,4 +31,24 @@ const integerNum = Number.parseInt(integerString);
 
 console.log("parseFloat : ",floatNum,"parseInt : ",integerNum);
 
-// 
+// Number.isInteger() 
+const integerNumber = 45;
+const floatingNumber = 45.45;
+const stringNumber = "10";
+
+console.log("is integer method : ",Number.isInteger(integerNumber));
+console.log("is integer method : ",Number.isInteger(floatingNumber));
+console.log("is integer method : ",Number.isInteger(stringNumber));
+
+//  Number.isSafeInteger
+const safeInteger = -9007199254740991; // -(2^53 - 1) to (2^53-1)
+const unsafeInteger = 9007199254740992; // (2^53)
+
+console.log("is safe integer method : ",Number.isSafeInteger(safeInteger)); // true
+console.log("is safe integer method : ",Number.isSafeInteger(unsafeInteger)); // false
+
+// Number Properties
+console.log("Max Value : ",Number.MAX_VALUE)
+console.log("Max safe intger : ",Number.MAX_SAFE_INTEGER)
+console.log("POSITIVE INFINITY : ",Number.POSITIVE_INFINITY)
+console.log("NEGATIVE INFINITY : ",Number.NEGATIVE_INFINITY)
