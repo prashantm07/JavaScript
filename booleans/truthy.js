@@ -18,7 +18,7 @@ if ([1, 2, 3, 4, 5, 6, 7, 8]) {
   // this block will be excute
 }
 
-// f;unction
+// function
 if (
   () => {
     return true;

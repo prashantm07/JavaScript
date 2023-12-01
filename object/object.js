@@ -25,15 +25,15 @@
 // factory function
 function createCircle(radius){
     return {
-        radius : radius,
+        radius, // or radius : radius 
         draw (){
             console.log("draw");
         }
     };
 }
-// const c1 = createCircle(1);
+const c1 = createCircle(110);
 // const c2 = createCircle(10);
-// console.log(c2);
+console.log(c1);
 
 // Custructor function
 
@@ -45,4 +45,4 @@ function Circle(radius){
 }
 
 const c = new Circle(1);
-console.log(c);
+// console.log(c);
