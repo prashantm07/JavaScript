@@ -41,3 +41,19 @@ const a3 = ["mango","apple","banana"];
 
 const newArr = a1.concat(a2,a3); // concat always return new array
 console.log(newArr)
+
+// sort arrays
+ const f = ["kiwi", "banana", "mango","apple"];
+const fSort = f.sort();
+console.log("sorted fruits",fSort);
+
+// find lowest and higthest element in array
+const points = [40, 100, 1, 5, 25, 10];
+const lowestElement = points.sort((a,b) =>{
+    return a - b;
+})
+console.log("lowest value : ",lowestElement[0]," ", "higthest value : ",lowestElement[points.length-1])
+console.log(lowestElement,"lowest element")
+
+// reverse arrays
+console.log("reversed fruit",f.reverse());
