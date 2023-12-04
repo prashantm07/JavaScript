@@ -1,5 +1,6 @@
 const points = [40, 100, 1, 5, 25, 10,1000];
 
+//  min value
 function minValue(arr){
     let len = arr.length;
     let min = Infinity;
@@ -12,6 +13,7 @@ function minValue(arr){
     return min;
 }
 
+// max value 
 function maxValue(arr){
     let len = arr.length;
     let max = -Infinity;

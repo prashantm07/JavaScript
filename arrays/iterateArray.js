@@ -18,6 +18,11 @@ function MyFunction(item) {
 //   console.log(item);
 }
 
+// forEach
+arr.forEach((num)=>{
+  // console.log(num);
+})
+
 // Using loop initalization 
 const fillArray = new Array();
 const length = 5;
