@@ -1,5 +1,6 @@
-
+//  not good practice define veriable in global 
 const colour = 'red';
+
 const start = ()=>{
 const message = 'hi';
 const colour = 'green';
