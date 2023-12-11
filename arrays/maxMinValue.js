@@ -29,5 +29,5 @@ function maxValue(arr){
 const min = minValue(points);
 console.log( "minimun value is : ",min);
 
-const max = maxValue    (points);
+const max = maxValue (points);
 console.log( "max value is : ",max);

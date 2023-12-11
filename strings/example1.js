@@ -5,4 +5,4 @@ let str4 = "We are the so-called \'Vikings\' from the north"
 let str5 = "it\'s"
 let str6 = "prashant \r mane"
 
-console.log(str6)
+console.log(str4)

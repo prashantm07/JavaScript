@@ -12,10 +12,11 @@ console.log(str);
 // syntax is  ${...}
 
 // variable interpolation
-let fName = "prashant";
+let fName = "asd";
 let lastName = "mane";
 let text = `hello ${fName} ${lastName}.`
 console.log(text);
+
 // Expression substitution
 let price = 2.5005;
 let vat = 2;

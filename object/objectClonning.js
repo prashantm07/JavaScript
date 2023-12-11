@@ -13,7 +13,7 @@ const person = {
 const another1 = {};
 
 for(let key of Object.keys(person)){
-    another[key] = person[key];
+    another1[key] = person[key];
 
 }
 console.log(another1);
