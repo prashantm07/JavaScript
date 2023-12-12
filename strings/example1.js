@@ -4,5 +4,6 @@ let str3 = "We are the so-called \"Vikings\" from the north"
 let str4 = "We are the so-called \'Vikings\' from the north"
 let str5 = "it\'s"
 let str6 = "prashant \r mane"
+let s = '"prashant"'
 
-console.log(str4)
+console.log(s.replace(/^"|"$/g,' '));
