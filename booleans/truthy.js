@@ -3,7 +3,7 @@ if ("hello") {
   // this block will be excute
 }
 
-// Nimber (except 0)
+// Number (except 0)
 if (45) {
   // this block will be excute
 }

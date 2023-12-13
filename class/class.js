@@ -31,3 +31,4 @@ const product1 = class {
 
 let chair = new product1("chair", 1400, 10, "c001");
 console.log(chair);
+

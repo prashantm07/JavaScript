@@ -17,16 +17,16 @@ map.set(5, "rahul");
 
 
 //get element from map 
-// console.log(map.get(1));
+console.log(map.get(1));
 
 // delete element from map
-// console.log(map.delete(2));
+console.log(map.delete(2));
 
 // clear all elements
-// map.clear()
+map.clear()
 
 // size of map
-// console.log(map.size);
+console.log(map.size);
 
 // type of map (return object)
 console.log(typeof map);
@@ -38,6 +38,6 @@ console.log(map instanceof Map);
 console.log(map.has(1));
 
 // // using forEach loop
-// map.forEach((value, key) => {
-//   console.log(`${key} ${value}`);
-// });
+map.forEach((value, key) => {
+  console.log(`${key} ${value}`);
+});

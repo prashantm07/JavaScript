@@ -1,13 +1,13 @@
-/*
+/* array is special type of varoable can hold more than one element
 array methods
-- length
--toString
--push
--pop
--shift
--unshift
+
+- length -
+-toString - 
+-push 
+-pop 
+-shift 
+-unshift 
 -join 
--delete
 -concate
 -flat
 -splice
@@ -20,6 +20,9 @@ console.log("toString: " + arr.toString());
 arr.push ("app"); // add new elements in aarray
 console.log(arr);
 console.log(arr.join(" ")) // similar to toString method additional only specified the seperator
+
+let newArray = arr.flat();
+console.log(newArray,"new array")
 
 const a = [1,2,3];
 console.log(a);

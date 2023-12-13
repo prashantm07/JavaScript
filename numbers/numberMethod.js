@@ -5,6 +5,7 @@
 // Number.toString() method:
 const num = 42;
 const str = num.toString();
+console.log("toString", str);
 console.log(typeof str); // String
 
 // Number.toFixed() method:

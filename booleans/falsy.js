@@ -2,6 +2,9 @@
 if ("") {
      // This block will NOT be executed
 }
+else{
+     // will be executed
+}
 
 // Number '0'
 if (0) {
