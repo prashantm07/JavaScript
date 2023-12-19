@@ -1,142 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sortable User Cards Example</title>
-  <style>
-    body {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        margin-top: 100px;
-    }
-
-    #userCardContainer {
-      width: 300px;
-      border: 2px solid #121111;
-      padding: 20px;
-      margin: 20px;
-     
-    }
-
-    .sort-options {
-      margin-bottom: 20px;
-      text-align: right;
-    }
-
-    .user-card {
-      width: 200px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
-      margin: 16px;
-    }
-
-    .user-card-content {
-       background-color: #f0f0f0;
-      border: 2px solid #121111;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    .user-card h3 {
-      margin-top: 0;
-      color: #333333;
-    }
-
-    .user-card p {
-      color: #666666;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="sort-options">
-    
-    <label>Sort by:</label>
-    <select id="sortOption" onchange="sortUserCards()">
-      <option value="name">Name</option>
-      <option value="age">Age</option>
-      <option value="id">id</option>
-      <option value="city">City</option>
-    </select>
-</div>
-
-<div id="userCardContainer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable User Cards Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sort-options">
+      <label>Sort by:</label>
+      <select id="sortOption" onchange="sortUserCards()">
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+        <option value="city">City</option>
+      </select>
+    </div>
+    <div id="userCardContainer">
       <h1>Template</h1>
-    
-  </div>
-
-  <script>
-    function sortUserCards() {
-        // get seleted sorting option 
-      const sortOption = document.getElementById('sortOption').value;
-    //   container holds the users
-      const userCardContainer = document.getElementById('userCardContainer');
-
-    //   convert collection user to array for sorting
-      const userCards = Array.from(userCardContainer.children);
-
-      userCards.sort((a, b) => {
-        const aValue = (a.getAttribute(`${sortOption}`)|| '').toLowerCase(); ; // seleted option in drop down 
-        const bValue = (b.getAttribute(`${sortOption}`) || '').toLowerCase();; // seleted option in drop down 
-
-        if (sortOption === 'name' || sortOption === 'city' || sortOption === 'id') {
-
-          return aValue.localeCompare(bValue, undefined, { sensitivity: 'base' });
-          // return aValue.localeCompare(bValue);
-        } 
-        else {
-          return parseFloat(aValue) - parseFloat(bValue);
-          // return aValue - bValue;
-        }
-      });
-
-      // change inner html of an element
-      userCardContainer.innerHTML = '';
-      // appendChild : add html element
-      userCards.forEach(card => userCardContainer.appendChild(card));
-    }
-
-    // Fetch user data from the JSON file
-    fetch('data.json')
-      .then(response => response.json())
-      .then(users => {
-        // Create user cards dynamically based on the JSON data
-        const userCardContainer = document.getElementById('userCardContainer');
-
-        users.forEach(user => {
-          const userCard = document.createElement('div');
-          userCard.className = 'user-card';
-          userCard.setAttribute('name', user.name);
-          userCard.setAttribute('id',user.id);
-          userCard.setAttribute('age', user.age);
-          userCard.setAttribute('city', user.city);
-
-          const userCardContent = `
-            <div class="user-card-content">
-              <p>Name :${user.name}</p>
-              <p>Id : ${user.id}</p>
-              <p>IsActive:${user.isActive}</p>
-              <p>Age: ${user.age}</p>
-              <p>City: ${user.city}</p>
-            </div>
-          `;
-
-          userCard.innerHTML = userCardContent;
-          userCardContainer.appendChild(userCard);
-        });
-
-        const sortOptionDropdown = document.getElementById('sortOption');
-          sortOptionDropdown.value = 'id';
-
-        // Initial sorting by id
-        sortUserCards();
-      })
-      .catch(error => console.error('Error fetching user data:', error));
-  </script>
-
-</body>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
